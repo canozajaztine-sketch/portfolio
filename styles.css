@@ -85,10 +85,10 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(54px, 6.6vw, 92px); line-heig
 .project-featured .project-visual { min-height: 520px; }
 .project-visual::before { content: ''; position: absolute; inset: 0; background-image: var(--project-image); background-size: cover; background-position: center top; transform: scale(1); transition: transform .45s ease, filter .45s ease; z-index: 0; }
 .project-visual::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(4, 9, 8, .06) 0%, rgba(4, 9, 8, .12) 28%, rgba(4, 9, 8, .72) 100%); pointer-events: none; z-index: 1; }
-.newlight { --project-image: url('https://image.thum.io/get/width/1400/crop/860/noanimate/https://newlightcity.org/'); background: linear-gradient(145deg,#315d51,#102a24); }
-.experthub { --project-image: url('https://image.thum.io/get/width/1400/crop/860/noanimate/https://experthub.drillers.com/'); background: linear-gradient(145deg,#113b50,#081d28); }
-.setters { --project-image: url('https://image.thum.io/get/width/1400/crop/860/noanimate/https://safesetters.com/'); background: linear-gradient(145deg,#292929,#0f0f0f); }
-.rsvp { --project-image: url('https://image.thum.io/get/width/1400/crop/860/noanimate/https://canozajaztine-sketch.github.io/RSVP/'); background: linear-gradient(145deg,#6f414f,#2a1720); }
+.newlight { --project-image: url('assets/newlightcity.jpg'); background: linear-gradient(145deg,#315d51,#102a24); }
+.experthub { --project-image: url('assets/experthub.jpg'); background: linear-gradient(145deg,#113b50,#081d28); }
+.setters { --project-image: url('assets/safesetters.jpg'); background: linear-gradient(145deg,#292929,#0f0f0f); }
+.rsvp { --project-image: url('assets/rsvp.jpg'); background: linear-gradient(145deg,#6f414f,#2a1720); }
 .browser-top { position: relative; z-index: 2; height: 48px; display: flex; align-items: center; gap: 7px; padding: 0 16px; background: rgba(10,16,14,.34); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,.12); transition: background .28s ease; }
 .browser-top span { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.56); }
 .browser-top small { margin-left: 7px; color: rgba(255,255,255,.76); font-size: 10px; }
