@@ -1,7 +1,5 @@
 # Jaztine Canoza — Web Developer Portfolio
 
-A lightweight, responsive personal portfolio built for GitHub Pages.
-
 ## Positioning
 
 **Jaztine Canoza**  
