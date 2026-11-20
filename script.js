@@ -9,3 +9,20 @@ if (profilePhoto && portraitFrame) {
     portraitFrame.classList.add('photo-fallback');
   });
 }
+
+const copyEmailBtn = document.getElementById('copyEmailBtn');
+if (copyEmailBtn) {
+  copyEmailBtn.addEventListener('click', async () => {
+    const email = copyEmailBtn.getAttribute('data-email');
+    const originalText = copyEmailBtn.textContent;
+    try {
+      await navigator.clipboard.writeText(email);
+      copyEmailBtn.textContent = 'Copied!';
+      setTimeout(() => {
+        copyEmailBtn.textContent = originalText;
+      }, 2000);
+    } catch (err) {
+      copyEmailBtn.textContent = email;
+    }
+  });
+}
