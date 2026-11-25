@@ -304,33 +304,37 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-
   line-height: 1.65;
 }
 
-/* Additional Project Visuals (uses live screenshot file in assets/ if added, with tailored brand fallback) */
+/* Additional Project Visuals with multi-source live screenshot fallbacks */
 .websitedesigners {
-  --project-image: url('assets/websitedesigners.jpg'), url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitedesigners.com.au%2F?w=1280');
+  --project-image: url('assets/websitedesigners.jpg'), url('https://image.thum.io/get/width/1200/crop/800/noanimate/https://websitedesigners.com.au/'), url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitedesigners.com.au%2F?w=1280');
   background: linear-gradient(145deg, #1b2838, #0d1520);
 }
 .bpd {
-  --project-image: url('assets/bpd.jpg'), url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Fbpd.warrendigital.com.au%2F?w=1280');
+  --project-image: url('assets/bpd.jpg'), url('https://image.thum.io/get/width/1200/crop/800/noanimate/https://bpd.warrendigital.com.au/'), url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Fbpd.warrendigital.com.au%2F?w=1280');
   background: linear-gradient(145deg, #273849, #121c26);
 }
 .outdoorliving {
-  --project-image: url('assets/outdoorlivinghq.jpg'), url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Foutdoorlivinghq.com.au%2F?w=1280');
+  --project-image: url('assets/outdoorlivinghq.jpg'), url('https://image.thum.io/get/width/1200/crop/800/noanimate/https://outdoorlivinghq.com.au/'), url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Foutdoorlivinghq.com.au%2F?w=1280');
   background: linear-gradient(145deg, #244a38, #11261c);
 }
 .uniquepergolas {
-  --project-image: url('assets/uniquepergolas.jpg'), url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Funiquepergolas.com.au%2F?w=1280');
-  background: linear-gradient(145deg, #3c4b3e, #1a241b);
+  --project-image: url('assets/uniquepergolas.jpg'), url('https://image.thum.io/get/width/1200/crop/800/noanimate/https://uniquepergolas.com.au/'), url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Funiquepergolas.com.au%2F?w=1280');
+  background: radial-gradient(circle at 80% 25%, rgba(217, 182, 126, 0.28), transparent 55%), linear-gradient(135deg, #12243a 0%, #1d3654 55%, #0c1826 100%);
+}
+.reno360 {
+  --project-image: url('assets/reno360.jpg'), url('https://image.thum.io/get/width/1200/crop/800/noanimate/https://websitedesigners.com.au/'), url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitedesigners.com.au%2F?w=1280');
+  background: linear-gradient(145deg, #2d3e36, #141f1a);
 }
 .majesticglass {
-  --project-image: url('assets/majesticglass.jpg'), url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Fmajesticglass.com.au%2F?w=1280');
+  --project-image: url('assets/majesticglass.jpg'), url('https://image.thum.io/get/width/1200/crop/800/noanimate/https://majesticglass.com.au/'), url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Fmajesticglass.com.au%2F?w=1280');
   background: linear-gradient(145deg, #163c52, #0a1f2c);
 }
 .monacoelectrical {
-  --project-image: url('assets/monacoelectrical.jpg'), url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Fmonacoelectrical.au%2F?w=1280');
+  --project-image: url('assets/monacoelectrical.jpg'), url('https://image.thum.io/get/width/1200/crop/800/noanimate/https://monacoelectrical.au/'), url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Fmonacoelectrical.au%2F?w=1280');
   background: linear-gradient(145deg, #3a3222, #1b170f);
 }
 .highdental {
-  --project-image: url('assets/highdental.jpg'), url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Fhighdentalimplantsmelbourne.com.au%2F?w=1280');
+  --project-image: url('assets/highdental.jpg'), url('https://image.thum.io/get/width/1200/crop/800/noanimate/https://highdentalimplantsmelbourne.com.au/'), url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Fhighdentalimplantsmelbourne.com.au%2F?w=1280');
   background: linear-gradient(145deg, #1d4d56, #0d262b);
 }
 
@@ -446,4 +450,20 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-
   .seo-card {
     padding: 22px;
   }
+}
+
+
+.visual-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 0;
+  transition: transform .45s ease, filter .45s ease;
+}
+.project-card:hover .visual-bg-img {
+  transform: scale(1.06);
+  filter: saturate(1.05) brightness(.82);
 }
